@@ -12,9 +12,6 @@ const App = () => {
                     <h1>던체크</h1>
                 </div>
             </div>
-            {/* <div className = "settingButtonBox">
-                <div className = "settingButton"><Link to = '/setting'>컷 설정하기</Link></div>
-            </div> */}
             <Route exact = {true} path = '/' component = {Home} />
             <Route path = '/setting' component = {Setting} />
         </Router>
