@@ -1,6 +1,12 @@
 import React from 'react'
+import { RouteComponentProps } from 'react-router';
 
-const Setting = () => {
+const Setting = (props: RouteComponentProps) => {
+
+    const returnBack = () => {
+        props.history.push('/');
+    }
+
     return (
         <>
             <div className = "settingWrapBox">
@@ -12,7 +18,9 @@ const Setting = () => {
                     </ul>
                 </div>
                 <div className = "settingContentBox">
-                    
+                    <div className = 'returnBackButtonBox'>
+                        <button className = 'returnBackButton' onClick = {returnBack}>설정하기</button>
+                    </div>
                 </div>
             </div>
         </>
