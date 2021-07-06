@@ -1,12 +1,21 @@
 import React from 'react';
+import { RouteComponentProps } from 'react-router';
 
-const Home = () => {
+const Home = (props: RouteComponentProps) => {
+
+  const goSettingPage = () => {
+    props.history.push('/setting');
+  }
+
   return(
     <>
       <div className = "contentBox">
         <div className = "searchBarBox">
           <input type = "text" className = "searchBar" />
           <div className = "searchButton">검색</div>
+        </div>
+        <div className = "settingButtonBox">
+          <button className = "settingButton" onClick = {goSettingPage}>컷 설정하기</button>
         </div>
         <div className = "describeBox">
           <p className = "describe">
