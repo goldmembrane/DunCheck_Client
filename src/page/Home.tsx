@@ -3,19 +3,10 @@ import React from 'react';
 const Home = () => {
   return(
     <>
-      <div className = "headerBox">
-        <div className = "logoBox">logo</div>
-        <div className = "titleBox">
-          <h1>던체크</h1>
-        </div>
-      </div>
       <div className = "contentBox">
         <div className = "searchBarBox">
           <input type = "text" className = "searchBar" />
-          <button className = "searchButton">검색</button>
-        </div>
-        <div className = "settingButtonBox">
-          <button className = "settingButton">컷 설정하기</button>
+          <div className = "searchButton">검색</div>
         </div>
         <div className = "describeBox">
           <p className = "describe">
