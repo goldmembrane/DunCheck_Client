@@ -20,13 +20,13 @@ const Setting = (props: RouteComponentProps<{}>) => {
                     </ul>
                 </div>
             </div>
-            <Route path = '/setting' exact render = {() => 
-                <div className = "settingContentBox">
-                    <div className = 'returnBackButtonBox'>
-                        <button className = 'returnBackButton' onClick = {returnBack}>설정하기</button>
-                    </div>
-                </div>} />
+            <Route path = '/setting' exact = {true} />
             <Route path = '/setting/:option' component = {SettingDetail} />
+            <div className = "settingContentBox">
+                <div className = 'returnBackButtonBox'>
+                    <button className = 'returnBackButton' onClick = {returnBack}>설정하기</button>
+                </div>
+            </div>
         </>
     )
 }
