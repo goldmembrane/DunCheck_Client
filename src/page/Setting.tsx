@@ -1,6 +1,6 @@
 import React from 'react'
 import { RouteComponentProps, Link, Route } from 'react-router-dom';
-import Equipment from './Equipment';
+import SettingDetail from './SettingDetail';
 
 const Setting = (props: RouteComponentProps<{}>) => {
 
@@ -14,9 +14,9 @@ const Setting = (props: RouteComponentProps<{}>) => {
             <div className = "settingWrapBox">
                 <div className = "settingCheckOptionBox">
                     <ul className = "settingCheckOptionCollection">
-                        <li className = "settingCheckOption"><Link to ='/setting/equipment'>마부</Link></li>
-                        <li className = "settingCheckOption">딜표</li>
-                        <li className = "settingCheckOption">버프력</li>
+                        <li className = "settingCheckOption"><Link to = '/setting/equipment'>장비</Link></li>
+                        <li className = "settingCheckOption"><Link to = '/setting/damage'>딜표</Link></li>
+                        <li className = "settingCheckOption"><Link to = '/setting/buffscore'>버프력</Link></li>
                     </ul>
                 </div>
             </div>
@@ -26,7 +26,7 @@ const Setting = (props: RouteComponentProps<{}>) => {
                         <button className = 'returnBackButton' onClick = {returnBack}>설정하기</button>
                     </div>
                 </div>} />
-            <Route path = '/setting/:option' component = {Equipment} />
+            <Route path = '/setting/:option' component = {SettingDetail} />
         </>
     )
 }

@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 const Equipment = () => {
-    return(
+    return (
         <>
-            <div>마부</div>
+            <div>장비 표시</div>
         </>
     )
 }
