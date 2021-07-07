@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
+import BuffScore from '../settingOption/BuffScore';
+import Damage from '../settingOption/Damage';
+import Equipment from '../settingOption/Equipment';
 
 interface MatchParams {
     option: string;
@@ -10,7 +13,9 @@ const SettingDetail = ({ match }: RouteComponentProps<MatchParams>) => {
 
     return (
         <>
-            <div>{option}</div>
+            {option === 'equipment' && <Equipment />}
+            {option === 'damage' && <Damage />}
+            {option === 'buffscore' && <BuffScore />}
         </>
     )
 }
