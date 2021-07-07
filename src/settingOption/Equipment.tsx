@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { Link, Route } from 'react-router-dom';
+import EquipmentDetail from './EquipmentDetail';
+
 
 const Equipment = () => {
     return (
@@ -9,13 +12,15 @@ const Equipment = () => {
                 </div>
                 <nav>
                     <ul>
-                        <li>장비</li>
-                        <li>아바타</li>
-                        <li>크리쳐</li>
-                        <li>탈리스만</li>
+                        <li className = "cutOptions"><Link to = '/setting/equipment/cutequipment'>장비</Link></li>
+                        <li className = "cutOptions"><Link to = '/setting/equipment/cutavatar'>아바타</Link></li>
+                        <li className = "cutOptions"><Link to = '/setting/equipment/cutcreature'>크리쳐</Link></li>
+                        <li className = "cutOptions"><Link to = '/setting/equipment/cuttalisman'>탈리스만</Link></li>
                     </ul>
                 </nav>
             </div>
+            <Route path = '/setting/equipment' exact = {true} />
+            <Route path = '/setting/equipment/:cut' component = {EquipmentDetail} />
         </>
     )
 }
