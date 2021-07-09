@@ -11,11 +11,15 @@ interface MatchParams {
 const SettingDetail = ({ match }: RouteComponentProps<MatchParams>) => {
     const { option } = match.params;
 
+    const buffSubmit = (buff : { seraphim: number, saint: number, hecate: number}) => {
+        console.log(buff);
+    }
+
     return (
         <>
             {option === 'equipment' && <Equipment />}
             {option === 'damage' && <Damage />}
-            {option === 'buffscore' && <BuffScore />}
+            {option === 'buffscore' && <BuffScore buffSubmit = {buffSubmit}/>}
         </>
     )
 }
