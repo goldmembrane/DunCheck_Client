@@ -15,10 +15,14 @@ const SettingDetail = ({ match }: RouteComponentProps<MatchParams>) => {
         console.log(buff);
     }
 
+    const dealSubmit = (deal : { dealer: number, synergy: number}) => {
+        console.log(deal);
+    }
+
     return (
         <>
             {option === 'equipment' && <Equipment />}
-            {option === 'damage' && <Damage />}
+            {option === 'damage' && <Damage dealSubmit = {dealSubmit}/>}
             {option === 'buffscore' && <BuffScore buffSubmit = {buffSubmit}/>}
         </>
     )
