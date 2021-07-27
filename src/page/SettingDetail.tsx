@@ -19,9 +19,13 @@ const SettingDetail = ({ match }: RouteComponentProps<MatchParams>) => {
         console.log(deal);
     }
 
+    const magicSubmit = (magic : { weapon : number, shirt: number, accessory: number, auxiliary: number, magicStone: number, earling: number}) => {
+        console.log(magic);
+    }
+
     return (
         <>
-            {option === 'equipment' && <Equipment />}
+            {option === 'equipment' && <Equipment magicSubmit = {magicSubmit}/>}
             {option === 'damage' && <Damage dealSubmit = {dealSubmit}/>}
             {option === 'buffscore' && <BuffScore buffSubmit = {buffSubmit}/>}
         </>
